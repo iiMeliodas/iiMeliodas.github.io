@@ -1,0 +1,76 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 36 33% 97%;
+    --foreground: 29 43% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 29 43% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 29 43% 15%;
+
+    --primary: 29 43% 27%;
+    --primary-foreground: 36 33% 97%;
+
+    --secondary: 36 33% 94%;
+    --secondary-foreground: 29 43% 27%;
+
+    --muted: 36 33% 94%;
+    --muted-foreground: 29 20% 40%;
+
+    --accent: 36 33% 94%;
+    --accent-foreground: 29 43% 27%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 36 33% 97%;
+
+    --border: 36 20% 85%;
+    --input: 36 20% 85%;
+    --ring: 29 43% 27%;
+
+    --radius: 0.5rem;
+  }
+
+  * {
+    @apply border-border;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-furniture-softwhite text-foreground font-sans;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5 {
+    @apply font-serif font-medium;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply container px-4 md:px-8 lg:px-12 mx-auto;
+  }
+  
+  .btn-primary {
+    @apply bg-furniture-walnut text-white px-6 py-3 rounded-sm hover:bg-furniture-darkbrown transition-colors duration-300 font-medium;
+  }
+  
+  .btn-secondary {
+    @apply bg-transparent border border-furniture-walnut text-furniture-walnut px-6 py-3 rounded-sm hover:bg-furniture-walnut hover:text-white transition-colors duration-300 font-medium;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl lg:text-5xl font-serif font-medium text-furniture-walnut mb-8;
+  }
+  
+  .section-subtitle {
+    @apply text-lg text-furniture-darkbrown/80 max-w-2xl mx-auto mb-12;
+  }
+}
